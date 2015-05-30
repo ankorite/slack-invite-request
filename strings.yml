@@ -13,11 +13,10 @@ main:
       "We look forward to seeing you there."
   about:
     team:
-      name: "Enlightened AZ"
-      link: "https://enlightened.slack.com"
+      name: "EnlightenedAK"
+      link: "https://enlightenedak.slack.com"
       description:
-        "We're a team of dedicated Enlightened players around the Phoenix, AK
-        area."
+        "We're a team of dedicated Enlightened players from all over Alaska."
 apply:
   # Displayed at the top of the page
   header:
