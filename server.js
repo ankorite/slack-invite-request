@@ -20,6 +20,8 @@ var yaml = require('js-yaml');
 var async = require('async');
 var changeCase = require('change-case');
 
+var mv = require('mv');
+
 var strings = yaml.safeLoad(fs.readFileSync(path.resolve('./strings.yml')));
 
 var env = process.env;
@@ -144,7 +146,7 @@ app.post('/apply', validate(), rateLimit(), function (req, res) {
       uri: req.originUri + '/images/' + filename
     });
 
-    renameJobs.push(async.apply(fs.rename, tmpPath, dest));
+    renameJobs.push(mv(tmpPath, dest, function(err)));
   }
 
   async.parallel(renameJobs, function (err) {
