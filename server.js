@@ -146,7 +146,7 @@ app.post('/apply', validate(), rateLimit(), function (req, res) {
       uri: req.originUri + '/images/' + filename
     });
 
-    renameJobs.push(mv(tmpPath, dest, function(err)));
+    renameJobs.push(async.parallel(mv(tmpPath, dest, function(err))));
   }
 
   async.parallel(renameJobs, function (err) {
