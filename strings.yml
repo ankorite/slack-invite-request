@@ -77,7 +77,7 @@ apply:
         title: "Comments"
         help:
           "Any additional information you would like to provide
-          to help expedite your request."
+          to help expedite your request. For example the agent who referred you."
         required: false
         readonly: false
         # if this property is defined, the input will use the defined html
